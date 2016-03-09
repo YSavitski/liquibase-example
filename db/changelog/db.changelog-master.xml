@@ -10,4 +10,5 @@
     <include file="db/changelog/db.changelog-v3-create-table-document.xml"/>
     <include file="db/changelog/db.changelog-v4-add-documents.sql"/>
     <include file="db/changelog/db.changelog-v5-create-type-status.xml"/>
+    <include file="db/changelog/db.changelog-v6-alter-table-document-add-column-status.yml"/>
 </databaseChangeLog>
