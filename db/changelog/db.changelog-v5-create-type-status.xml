@@ -5,9 +5,14 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-    <include file="db/changelog/db.changelog-v1-create-table-person.xml"/>
-    <include file="db/changelog/db.changelog-v2-add-people.xml"/>
-    <include file="db/changelog/db.changelog-v3-create-table-document.xml"/>
-    <include file="db/changelog/db.changelog-v4-add-documents.sql"/>
-    <include file="db/changelog/db.changelog-v5-create-type-status.xml"/>
+    <changeSet id="5" author="pkorobeinikov">
+        <sql>
+            create type status as enum (
+                'new',
+                'confirmed',
+                'rejected',
+                'done'
+            )
+        </sql>
+    </changeSet>
 </databaseChangeLog>
