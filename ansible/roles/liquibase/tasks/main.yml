@@ -1,0 +1,19 @@
+---
+- name: ensure liquibase is downloaded
+  stat: path=/tmp/liquibase.tar.gz
+  register: st
+
+- name: download liquibase
+  get_url:
+    url: https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.4.2/liquibase-3.4.2-bin.tar.gz
+    dest: /tmp/liquibase.tar.gz
+    mode: 0644
+  when:
+    st.exists is not defined
+
+- name: create liquibase installation directory
+  file: name=/opt/liquibase/ state=directory owner=vagrant group=vagrant
+
+- name: install liquibase
+  shell: tar xf /tmp/liquibase.tar.gz -C /opt/liquibase/
+  become_user: vagrant
