@@ -15,5 +15,8 @@
         <insert tableName="person">
             <column name="name" value="Person 3"/>
         </insert>
+        <rollback>
+            <delete tableName="person"/>
+        </rollback>
     </changeSet>
 </databaseChangeLog>

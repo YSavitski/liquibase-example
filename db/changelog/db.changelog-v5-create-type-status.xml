@@ -14,5 +14,10 @@
                 'done'
             )
         </sql>
+        <rollback>
+            <sql>
+                drop type status
+            </sql>
+        </rollback>
     </changeSet>
 </databaseChangeLog>
