@@ -8,4 +8,5 @@
     <include file="db/changelog/db.changelog-v1-create-table-person.xml"/>
     <include file="db/changelog/db.changelog-v2-add-people.xml"/>
     <include file="db/changelog/db.changelog-v3-create-table-document.xml"/>
+    <include file="db/changelog/db.changelog-v4-add-documents.sql"/>
 </databaseChangeLog>
