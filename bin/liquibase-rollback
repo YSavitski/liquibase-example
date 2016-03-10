@@ -4,7 +4,7 @@ USERNAME=app
 PASSWORD=app
 URL=jdbc:postgresql://localhost:5432/app
 
-/opt/liquibase/liquibase --driver=org.postgresql.Driver \
+liquibase --driver=org.postgresql.Driver \
     --changeLogFile=db/changelog/db.changelog-master.xml \
     --url="$URL" \
     --username=$USERNAME \
