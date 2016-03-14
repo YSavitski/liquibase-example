@@ -15,5 +15,8 @@
   file: name="{{ liquibase.directory }}" state=directory owner=vagrant group=vagrant
 
 - name: install liquibase
-  shell: tar xf "{{ liquibase.download_path }}" -C "{{ liquibase.directory }}"
+  shell: |
+    tar xf "{{ liquibase.download_path }}" -C "{{ liquibase.directory }}"
+  args:
+    warn: no
   become_user: vagrant
