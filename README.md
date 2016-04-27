@@ -4,5 +4,6 @@ This repo contains `ansible`-provisioned `vagrant` box with `liquibase` and exam
 
     $ vagrant up
     $ vagrant ssh
+    $ cd /vagrant
     $ ./bin/liquibase-migrate  # migrates up
     $ ./bin/liquibase-rollback # rollbacks
