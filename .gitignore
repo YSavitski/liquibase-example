@@ -1,3 +1,6 @@
 # Vagrant stuff
 /.vagrant/
 !Vagrantfile
+
+/db/dbdoc/*
+!/db/dbdoc/.gitkeep

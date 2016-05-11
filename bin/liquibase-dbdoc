@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+USERNAME=app
+PASSWORD=app
+URL=jdbc:postgresql://localhost:5432/app
+
+liquibase --driver=org.postgresql.Driver \
+    --changeLogFile=db/changelog/db.changelog-master.xml \
+    --url="$URL" \
+    --username=$USERNAME \
+    --password=$PASSWORD \
+    --logLevel=info \
+    dbDoc db/dbdoc
